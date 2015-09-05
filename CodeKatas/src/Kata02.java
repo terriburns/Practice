@@ -3,8 +3,7 @@
  * http://codekata.com/kata/kata02-karate-chop/
  * 
  * TODO:
- * 1. debug
- * 2. write tests
+ * 1. write tests
  */
 
 public class Kata02 {
@@ -15,20 +14,19 @@ public class Kata02 {
     		return 	0;
     	}
     	else {
-    		int middle = list.length/2;
+    		int middle = (min+max)/2;
     		
 	    	if (key < list[middle] ){
 	    		//lower half
-	    		System.out.println("lower set");
 	    		return binarySearch(key, min, middle - 1, list);
 	    	}
 	    	else if (key > list[middle]) {
 	    		//upper half
-	    		System.out.println("upper set");
 	    		return binarySearch(key, middle + 1, max, list);
 	    	}	    
 	    	else {
 	    	  //numberWeAreLookingFor == middle
+	    		System.out.println("its the middle");
 	          return middle;
 	    	}
     	}
@@ -37,7 +35,6 @@ public class Kata02 {
     	//declare an array
     	int[] myList = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; 	
     	//ints min and max are INDEXES  + this method will return and INDEX   
-    	System.out.println(myList.length);
-    	System.out.println("The key can be found at index " + binarySearch(8, 0, 10, myList) + " of the array");   	
+    	System.out.println("The key can be found at index " + binarySearch(2, 0, 10, myList) + " of the array");   	
 	}
 }
