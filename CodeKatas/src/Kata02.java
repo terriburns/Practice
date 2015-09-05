@@ -1,6 +1,10 @@
 /*
  * Karate Chop
  * http://codekata.com/kata/kata02-karate-chop/
+ * 
+ * TODO:
+ * 1. debug
+ * 2. write tests
  */
 
 public class Kata02 {
