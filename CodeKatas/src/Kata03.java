@@ -6,6 +6,8 @@ public class Kata03 {
 	public static void main(String[] args){
 		//How Big?
         //roughly how many binary digits (bit) are required for the unsigned representation of:
+		
+		//SOLUTION: the exponent 2^x == the number of bits required! magic!
   
 		//1,000
 		//Log based 2 of 1000 -- aka 2^x=1000, solve for x
@@ -28,6 +30,15 @@ public class Kata03 {
 		
 		//My town has approximately 20,000 residences. How much space is required to store the names, 
 		//addresses, and a phone number for all of these (if we store them as characters)?
+		//IDK OH GOD
+		
+		//Im storing 1,000,000 integers in a binary tree. Roughly how many nodes and levels can I 
+		//expect the tree to have? Roughly how much space will it occupy on a 32-bit architecture?
+		
+		//log based two of 1 million = 2^x = 1,000,000
+		//number of levels
+		//int partOneAnswer =
+		//number of nodes
+				
 	}
-
 }
