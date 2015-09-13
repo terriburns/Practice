@@ -35,9 +35,9 @@ public class Kata03 {
 		//Im storing 1,000,000 integers in a binary tree. Roughly how many nodes and levels can I 
 		//expect the tree to have? Roughly how much space will it occupy on a 32-bit architecture?
 		
-		//log based two of 1 million = 2^x = 1,000,000
-		//number of levels
-		//int partOneAnswer =
+		//the number of levels is log based two of 1 million = 2^x = 1,000,000
+		
+
 		//number of nodes
 				
 	}
