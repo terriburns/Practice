@@ -8,14 +8,12 @@ import java.util.ArrayList;
  * http://codekata.com/kata/kata04-data-munging/
  */
 public class Kata04 {
-	// In weather.dat you’ll find daily weather data for Morristown, NJ for June
-	// 2002.
-	// Download this text file, then write a program to output the day number
+	//write a program to output the day number
 	// (column one) with the smallest
 	// temperature spread (the maximum temperature is the second column, the
 	// minimum the third column).
 
-	// STEPs
+	// STEPS
 	// 1. Make sure Scanner, FileNotFound, File, and ArrayList are imported
 	// because you need them all
 	// 2. Read the file
@@ -38,5 +36,10 @@ public class Kata04 {
 			weatherData.add(lineScanner.nextLine());
 		}
 		System.out.println(weatherData);
+		System.out.printf("%-16s%-24s%-24s\n", "Day number: ", "Max Temp: ", "Min Temp: ");
+		for (int i=1; i <weatherData.size(); i++){
+			i++;
+			//System.out.printf("%-16s%-24s%-24s\n", weatherData[i], "Max Temp: ", "Min Temp: ");
+		}
 	}
 }
