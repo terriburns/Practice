@@ -4,11 +4,11 @@
  */
 public class Kata03 {
 	public static void main(String[] args){
-		//How Big?
-        //roughly how many binary digits (bit) are required for the unsigned representation of:
-		
+		//HOW BIG?
+		//-----------------------------------------
+        //roughly how many binary digits (bit) are required for the unsigned representation of:	
+		//-----------------------------------------
 		//SOLUTION: the exponent 2^x == the number of bits required! magic!
-  
 		//1,000
 		//Log based 2 of 1000 -- aka 2^x=1000, solve for x
 		int answer1=10;
@@ -28,17 +28,32 @@ public class Kata03 {
 		//same as above except x8. 8 requires 3 bits
 		int answer5=43;
 		
+		//-----------------------------------------
 		//My town has approximately 20,000 residences. How much space is required to store the names, 
 		//addresses, and a phone number for all of these (if we store them as characters)?
-		//IDK OH GOD
+		//-----------------------------------------
+		String theAnswer;
+		//1 character == 1 byte
+		//Upper bound of name == 40 characters
+		//Upper bound of address == 40 characters
+		//Upper bound of phone number == 10 characters
+		//for 20,000 residences 
+		//(20,000)(40)(40)(10) == 320000000 characters
+		//theAnswwer = 320000000 bytes. 
 		
-		//Im storing 1,000,000 integers in a binary tree. Roughly how many nodes and levels can I 
+		//-----------------------------------------
+		//I'm storing 1,000,000 integers in a binary tree. Roughly how many nodes and levels can I 
 		//expect the tree to have? Roughly how much space will it occupy on a 32-bit architecture?
+		//-----------------------------------------
+		//log(1000000)=x, 2*x=number of nodes, x=#of levels
+		String ANSWER; //below
+		//int x;
+		//int answerNumberOfNodes = 2^x;
+		//int answerNumerOfLevels =x;
 		
-		//the number of levels is log based two of 1 million = 2^x = 1,000,000
-		
-
-		//number of nodes
+		//-----------------------------------------
+		//HOW FAST?
+		//-----------------------------------------
 				
 	}
 }
