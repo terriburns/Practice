@@ -56,8 +56,12 @@ log(1,000,000) = 20
 
 2^20 = number of levels
 
->numbner of levels = 1048576
+>number of levels = 1048576
 
 space it'll occupy on the 32 bit architecture:
 
+1 int = 4 bits
 
+= 4,000,000 bits / 32 = 
+
+>125 bites of data
