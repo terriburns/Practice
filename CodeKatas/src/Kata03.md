@@ -48,20 +48,18 @@ Upper bound of phone number == 10 chars
 
 ##I'm storing 1,000,000 integers in a binary tree. Rougly how many nodes and levels can I expect the tree to have? Roughly how much space will it occupy on the 32-bit architecture?
 
-2^x = total number of nodes, where x = number of levels
+1,000,000 = totally number of nodes (one node/integer)
 
-log(1,000,000) = 20
+levels at best case (balance) = log(2) of 1,000,000 = 20
 
->number of nodes = 20
+at worst case = 1,000,000 (which would be one node/level)
 
-2^20 = number of levels
+32 bit architecture = 4 bytes
 
->number of levels = 1048576
+Each node holds its own value, a pointer to the left child, and pointer to the right child = 12 bytes
 
-space it'll occupy on the 32 bit architecture:
+12,000,000 bytes. But the final level of nodes are leaves (so do not have pointers to the left and right children). 
 
-1 int = 4 bits
+Thus, the final level of nodes only have 4 bytes of data, not 12.
 
-= 4,000,000 bits / 32 = 
-
->125 bites of data
+So the total is... 
