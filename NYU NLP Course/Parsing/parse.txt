@@ -1,0 +1,79 @@
+Problem 3
+----------
+1) "As such, many men harbor expectations of becoming professional athletes, womanizers and wealthy oilmen, their level of intellect, charm and drive notwithstanding."
+
+(In retrospect, I think this was actually a rather difficult sentence to parse)
+
+2)
+I attached two images of trees I used to manually parse. Picture 1 is from the original sentence. As you can see in my implementation, it was difficult to get most of the tree completed without using a lot of recursion. I tried breaking the sentence down ("many men harbor expections of becoming professional athletes") for Picture 2. I also tested both implementations: see below.
+
+rules
+------
+1) "As such, many men harbor expectations of becoming professional athletes, womanizers and wealthy oilmen, their level of intellect, charm and drive notwithstanding."
+S  -> P P N | NP VP
+NP -> Det Nom | PropN
+Nom -> Adj Nom | N
+VP -> V Adj | V NP | V S | V NP PP
+PP -> P NP
+Det -> 'the' | 'a' | 'their' | 'and'
+N -> V | P | 'men' | 'expectations' | 'professional' | 'athletes' | 'womanizers' |  'level' | 'intellect' | 'charm' | 'drive'
+Adj  -> N | 'many' | 'notwithstanding'
+V ->  N | 'harbor' | 'becoming' | 'oilmen'
+P -> P | N | Adj | Det | 'on' | 'of' | 'such' | 'as'
+
+I decided to set new rules for a subset of the original sentence to see if it could better parse.
+
+2) "many men harbor expectations of becoming professional athletes"
+S  -> NP VP
+NP -> Adj N
+VP -> V N | PP
+PP -> P VP
+N -> 'men' | 'expectations' | 'professional' | 'athletes' | 'womanizers' |  'level' | 'intellect' | 'charm' | 'drive'
+Adj  -> 'many' | 'notwithstanding'
+V -> 'harbor' | 'becoming' | 'oilmen'
+P -> 'on' | 'of' | 'such' | 'as'
+
+Interesting problems:
+1) Unsure how the phrase "as such" should have been parsed -- I split up the words individually but also tried keeping the phrase together.
+2) This sentence has a lot of commas. The parser was unable to identify the words with trailing commas, because it looked at them as one unified string. I had to remove the grammar in order to have the parser recognize the words. Also, this sentence begins with a capital letter, and the parser was unable to make the distinction between "a" (as noted in the rules) vs "A" as noted in the sentence. The best implementation of this would probably be to convert each char to all lowercase or uppercase.
+
+Problem 4
+----------
+Output: Null or stack overflow
+
+After *hundreds* of attempts, the parser was never able to successfully parse the first or second set of rules/input. My process was to test it out, slightly edit the rules, debug, and repeat. The vast majority of the time it was a stack overflow errors caused by both timing and recursion. For the timing issue, this is likely because there are very many different ways that this sentence could be parsed.  For recursion, it was because certain implementations were difficult to avoid having various rules re-call one anther as the sentence was so complex.
+
+Problem 5
+----------
+Output:
+
+Before I ran the program, I received these warnings:
+Warning: S -> P P N will never be used
+Warning: S -> P P N will never be used
+Warning: NP -> Det Nom will never be used
+Warning: Nom -> Adj Nom will never be used
+Warning: Nom -> N will never be used
+Warning: Nom -> N will never be used
+Warning: Nom -> N will never be used
+Warning: VP -> V Adj will never be used
+Warning: VP -> V NP will never be used
+Warning: VP -> V S will never be used
+Warning: VP -> V NP PP will never be used
+Warning: PP -> P NP will never be used
+Warning: PP -> P NP will never be used
+Warning: N -> P will never be used
+Warning: Adj -> N will never be used
+Warning: Adj -> N will never be used
+Warning: V -> N will never be used
+
+When I ran the output, I got a null response.
+
+Differences: There was no stack overflow.
+
+Problem 6
+----------
+Output:
+
+When I ran the output, I got a null response.
+
+Differences: There was no stack overflow, just like with the shift reduce parser.
