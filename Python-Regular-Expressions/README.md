@@ -4,6 +4,8 @@ See the homework assignment <a href="http://cs.nyu.edu/courses/fall15/CSCI-UA.04
 
 The object is to create two programs using regular expressions that identify (1) dollar amounts and (2) telephone numbers in a corpus.
 
+Note -- still needs tweaking :)
+
 #Run
 
 To run this file, replace `input.txt` with any text file of your choosing.
