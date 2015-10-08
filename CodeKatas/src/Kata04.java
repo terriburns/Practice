@@ -6,13 +6,10 @@ import java.util.ArrayList;
 /*
  * Data Munging
  * http://codekata.com/kata/kata04-data-munging/
+ * TODO:
+ * 	-going to try rewriting using regular expressions
  */
 public class Kata04 {
-	//write a program to output the day number
-	// (column one) with the smallest
-	// temperature spread (the maximum temperature is the second column, the
-	// minimum the third column).
-
 	// STEPS
 	// 1. Make sure Scanner, FileNotFound, File, and ArrayList are imported
 	// because you need them all
@@ -27,7 +24,7 @@ public class Kata04 {
 		try {
 			lineScanner = new Scanner(Weather);
 		} catch (FileNotFoundException e) {
-			System.out.println("Where da file" + Weather.getName() + "at");
+			System.out.println("Where da file? " + Weather.getName() + "at");
 			System.exit(1);
 		}
 		// 4. Add the file to an ArrayList
@@ -35,11 +32,11 @@ public class Kata04 {
 		while (lineScanner.hasNext()) {
 			weatherData.add(lineScanner.nextLine());
 		}
-		System.out.println(weatherData);
+		//System.out.println(weatherData);
 		System.out.printf("%-16s%-24s%-24s\n", "Day number: ", "Max Temp: ", "Min Temp: ");
-		for (int i=1; i <weatherData.size(); i++){
+		for (int i=0; i <weatherData.size()-1; i++){
 			i++;
-			//System.out.printf("%-16s%-24s%-24s\n", weatherData[i], "Max Temp: ", "Min Temp: ");
+			System.out.printf("%-16s%-24s%-24s\n", weatherData.get(i), "Max Temp: ", "Min Temp: ");
 		}
 	}
 }
