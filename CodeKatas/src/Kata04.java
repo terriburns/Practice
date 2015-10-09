@@ -36,7 +36,7 @@ public class Kata04 {
 		System.out.printf("%-16s%-24s%-24s\n", "Day number: ", "Max Temp: ", "Min Temp: ");
 		for (int i=0; i <weatherData.size()-1; i++){
 			i++;
-			System.out.printf("%-16s%-24s%-24s\n", weatherData.get(i), "Max Temp: ", "Min Temp: ");
+			System.out.printf(weatherData.get(i)+"\n");
 		}
 	}
 }
