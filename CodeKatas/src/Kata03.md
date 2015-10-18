@@ -69,4 +69,10 @@ Each node holds its own value, a pointer to the left child, and pointer to the r
 
 ##My binary search algorithm takes about 4.5mS to search a 10,000 entry array, and about 6mS to search 100,000 elements. How long would I expect it to take to search 10,000,000 elements (assuming I have sufficient memory to prevent paging).
 
+Binary search has 0(logn) search time. log(10,000) = 9 --> 9/2 = 4.5
+
+so log(10,000,000) =~ 23 --> 23/2 = 11.5
+
+== 11.5 seconds (?)
+
 ##Unix passwords are stored using a one-way hash function: the original string is converted to the ‘encrypted’ password string, which cannot be converted back to the original string. One way to attack the password file is to generate all possible cleartext passwords, applying the password hash to each in turn and checking to see if the result matches the password you’re trying to crack. If the hashes match, then the string you used to generate the hash is the original password (or at least, it’s as good as the original password as far as logging in is concerned). In our particular system, passwords can be up to 16 characters long, and there are 96 possible characters at each position. If it takes 1mS to generate the password hash, is this a viable approach to attacking a password?
