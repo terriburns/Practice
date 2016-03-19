@@ -1,7 +1,6 @@
 #Using regular expressions to identify phone numbers in a corpus
 #still not working, needs updating
 import re
-#read the input file
 inputFile = open("input.txt", "r")
 text = inputFile.read()
 #regular expression: see if there are matches
